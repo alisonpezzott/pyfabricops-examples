@@ -1,0 +1,6 @@
+{
+    "main": "-PRD",
+    "master": "-PRD",
+    "dev": "-DEV",
+    "staging": "-STG"
+}

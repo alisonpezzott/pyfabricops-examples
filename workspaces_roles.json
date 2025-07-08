@@ -1,0 +1,17 @@
+[
+    {
+        "user_uuid": "9322eb4a-4132-4bd1-8df1-5cd3d1d2400b",
+        "user_type": "User",
+        "role": "Admin"
+    },
+    {
+        "user_uuid": "b025341a-965a-4c35-b12e-2af63e5eb58f",
+        "user_type": "User",
+        "role": "Contributor"
+    },
+    {
+        "user_uuid": "cbe83b10-3b7c-4479-8168-e5281fabf7ea",
+        "user_type": "Group",
+        "role": "Admin"
+    }
+]
