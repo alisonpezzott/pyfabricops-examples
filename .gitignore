@@ -1,0 +1,11 @@
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+**/__pycache__/**
+**/_stg/**
+.vscode/
+.venv
+.env
+**/py_fab.egg-info
+**/dist
+**/build
+metadata/
