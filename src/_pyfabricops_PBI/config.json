@@ -1,0 +1,94 @@
+{
+    "main": {
+        "_pyfabricops_PBI": {
+            "workspace_config": {
+                "workspace_id": "22437908-a0d2-43ae-8a6e-f31e146ca9ab",
+                "workspace_name": "_pyfabricops_PBI-PRD",
+                "workspace_description": "Continuous integration for library pyfabricops with no capacity (PRO License). Branch: main.",
+                "capacity_id": "",
+                "capacity_region": null,
+                "workspace_roles": [
+                    {
+                        "user_uuid": "9322eb4a-4132-4bd1-8df1-5cd3d1d2400b",
+                        "user_type": "User",
+                        "role": "Admin",
+                        "display_name": "Alison Pezzott",
+                        "user_principal_name": "alison.pezzott@overdax.com"
+                    },
+                    {
+                        "user_uuid": "bde43861-55e1-4144-b572-be115312967f",
+                        "user_type": "ServicePrincipal",
+                        "role": "Admin",
+                        "display_name": "AppFabric",
+                        "app_id": "7f3c52e1-46fa-4d5d-880b-c1e721a1f729"
+                    }
+                ]
+            },
+            "folders": {
+                "Customers": "5bffcceb-8fdf-41ec-9d48-a5dbeb449f67",
+                "Main": "59dae329-dd9b-4dcf-a125-46d911ba8ac2"
+            },
+            "semantic_models": {
+                "Sales": {
+                    "id": "0b98d859-de8e-4708-a080-9d4e49e58f13",
+                    "description": "",
+                    "folder_id": "59dae329-dd9b-4dcf-a125-46d911ba8ac2",
+                    "parameters": {
+                        "Server": {
+                            "Value": "PEZZOTT",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "Database": {
+                            "Value": "AdventureWorksDW2022-PRD",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "CalendarWorkspaceId": {
+                            "Value": "22437908-a0d2-43ae-8a6e-f31e146ca9ab",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "CalendarDataflowId": {
+                            "Value": "187320e6-587d-4d59-9aad-47560992a851",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        }
+                    }
+                }
+            },
+            "reports": {
+                "Sales": {
+                    "id": "cd4e70fb-8579-4cb4-8cbe-9327d0d1db7c",
+                    "description": "",
+                    "folder_id": "59dae329-dd9b-4dcf-a125-46d911ba8ac2",
+                    "parameters": {
+                        "workspace_name": "_pyfabricops_PBI-PRD",
+                        "semantic_model_name": "Sales",
+                        "semantic_model_id": "0b98d859-de8e-4708-a080-9d4e49e58f13"
+                    }
+                },
+                "Customers": {
+                    "id": "0898138c-756f-4df8-8f34-0236b3f7fb9b",
+                    "description": "",
+                    "folder_id": "5bffcceb-8fdf-41ec-9d48-a5dbeb449f67",
+                    "parameters": {
+                        "workspace_name": "_pyfabricops_PBI-PRD",
+                        "semantic_model_name": "Sales",
+                        "semantic_model_id": "0b98d859-de8e-4708-a080-9d4e49e58f13"
+                    }
+                }
+            },
+            "dataflows_gen1": {
+                "Calendar": {
+                    "id": "187320e6-587d-4d59-9aad-47560992a851",
+                    "description": "Global calendar of project."
+                }
+            }
+        }
+    }
+}

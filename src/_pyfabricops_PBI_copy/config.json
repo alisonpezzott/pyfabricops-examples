@@ -1,0 +1,101 @@
+{
+    "main": {
+        "_pyfabricops_PBI_copy": {
+            "workspace_config": {
+                "workspace_id": "b94f8fe4-147a-42bc-9bfb-ef42df5d3711",
+                "workspace_name": "_pyfabricops_PBI_copy-PRD",
+                "workspace_description": "Continuous integration for library pyfabricops with no capacity (PRO License). Branch: main.",
+                "capacity_id": "",
+                "capacity_region": null,
+                "workspace_roles": [
+                    {
+                        "user_uuid": "9322eb4a-4132-4bd1-8df1-5cd3d1d2400b",
+                        "user_type": "User",
+                        "role": "Admin",
+                        "display_name": "Alison Pezzott",
+                        "user_principal_name": "alison.pezzott@overdax.com"
+                    },
+                    {
+                        "user_uuid": "b025341a-965a-4c35-b12e-2af63e5eb58f",
+                        "user_type": "User",
+                        "role": "Admin",
+                        "display_name": "Dev",
+                        "user_principal_name": "dev@overdax.com"
+                    },
+                    {
+                        "user_uuid": "bde43861-55e1-4144-b572-be115312967f",
+                        "user_type": "ServicePrincipal",
+                        "role": "Admin",
+                        "display_name": "AppFabric",
+                        "app_id": "7f3c52e1-46fa-4d5d-880b-c1e721a1f729"
+                    }
+                ]
+            },
+            "folders": {
+                "Customers": "4eb87fb5-9365-4444-819b-4eac6b921e77",
+                "Main": "3d4677c1-e3a9-48a6-8978-9b6ca044fe5f"
+            },
+            "semantic_models": {
+                "Sales": {
+                    "id": "6946f73f-1f10-4931-ac6f-13a4098063c7",
+                    "description": "",
+                    "folder_id": "3d4677c1-e3a9-48a6-8978-9b6ca044fe5f",
+                    "parameters": {
+                        "Server": {
+                            "Value": "PEZZOTT",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "Database": {
+                            "Value": "AdventureWorksDW2022-PRD",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "CalendarWorkspaceId": {
+                            "Value": "b94f8fe4-147a-42bc-9bfb-ef42df5d3711",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "CalendarDataflowId": {
+                            "Value": "0995df01-791d-41f5-baac-4ae0da9cac6b",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        }
+                    }
+                }
+            },
+            "reports": {
+                "Sales": {
+                    "id": "ce4d2b5f-d3c5-42c5-a129-2031ddce518f",
+                    "description": "",
+                    "folder_id": "3d4677c1-e3a9-48a6-8978-9b6ca044fe5f",
+                    "parameters": {
+                        "workspace_name": "_pyfabricops_PBI_copy-PRD",
+                        "semantic_model_name": "Sales",
+                        "semantic_model_id": "6946f73f-1f10-4931-ac6f-13a4098063c7"
+                    }
+                },
+                "Customers": {
+                    "id": "9ea00474-25fe-47de-a226-0a94e9032db7",
+                    "description": "",
+                    "folder_id": "4eb87fb5-9365-4444-819b-4eac6b921e77",
+                    "parameters": {
+                        "workspace_name": "_pyfabricops_PBI_copy-PRD",
+                        "semantic_model_name": "Sales",
+                        "semantic_model_id": "6946f73f-1f10-4931-ac6f-13a4098063c7"
+                    }
+                }
+            },
+            "dataflows_gen1": {
+                "Calendar": {
+                    "id": "0995df01-791d-41f5-baac-4ae0da9cac6b",
+                    "description": "Global calendar of project."
+                }
+            }
+        }
+    }
+}

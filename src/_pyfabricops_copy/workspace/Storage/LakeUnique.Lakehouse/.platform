@@ -1,0 +1,7 @@
+{
+    "metadata": {
+        "type": "Lakehouse",
+        "displayName": "LakeUnique",
+        "description": "The unique lakehouse of the project."
+    }
+}

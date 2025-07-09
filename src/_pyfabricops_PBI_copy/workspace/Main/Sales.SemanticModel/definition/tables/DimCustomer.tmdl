@@ -1,0 +1,124 @@
+table DimCustomer
+	lineageTag: 3dc1bb4c-7b84-4790-986b-867f517cd50f
+
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 41a7e074-d0c7-47f7-9e48-ba926f22d506
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullName
+		dataType: string
+		lineageTag: 3ee934e9-374b-415f-aa95-11ef01e8489d
+		summarizeBy: none
+		sourceColumn: FullName
+
+		annotation SummarizationSetBy = Automatic
+
+	column BirthDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: f00be6ea-3012-4376-b920-de3a4e7de97a
+		summarizeBy: none
+		sourceColumn: BirthDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MaritalStatus
+		dataType: string
+		lineageTag: 3f5fce7b-9f1f-40be-886d-80475e7dcc82
+		summarizeBy: none
+		sourceColumn: MaritalStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 59680a17-64b0-4f4e-a9b4-8ec4b1e8039a
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalChildren
+		dataType: int64
+		formatString: 0
+		lineageTag: 8e0164f8-ceb2-4e22-874a-72a4335a65b0
+		summarizeBy: none
+		sourceColumn: TotalChildren
+
+		annotation SummarizationSetBy = Automatic
+
+	column Education
+		dataType: string
+		lineageTag: 4a7e2a46-2aa5-46db-9b03-8a25ccff70a4
+		summarizeBy: none
+		sourceColumn: Education
+
+		annotation SummarizationSetBy = Automatic
+
+	column Occupation
+		dataType: string
+		lineageTag: 292142e2-bea1-417b-a505-4273c6073d98
+		summarizeBy: none
+		sourceColumn: Occupation
+
+		annotation SummarizationSetBy = Automatic
+
+	column HouseOwnerFlag
+		dataType: string
+		lineageTag: ac443f01-02e9-4e03-ac75-29ac6b990de9
+		summarizeBy: none
+		sourceColumn: HouseOwnerFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberCarsOwned
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d5118f2-b851-4809-a890-63021006274e
+		summarizeBy: none
+		sourceColumn: NumberCarsOwned
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 34f1a3ce-f161-4dca-a720-c9d83a47b2bb
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegionName
+		dataType: string
+		lineageTag: 85d4ea07-76e0-4656-b90e-381839d846bf
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: CountryRegionName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCustomer = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    dbo_DimCustomer = Source{[Schema="dbo",Item="DimCustomer"]}[Data],
+				    ExpandedDimGeography = Table.ExpandRecordColumn(dbo_DimCustomer, "DimGeography", {"City", "EnglishCountryRegionName"}, {"City", "EnglishCountryRegionName"}),
+				    ColumnsSelected = Table.SelectColumns(ExpandedDimGeography,{"CustomerKey", "FirstName", "MiddleName", "LastName", "BirthDate", "MaritalStatus", "Gender", "TotalChildren", "EnglishEducation", "EnglishOccupation", "HouseOwnerFlag", "NumberCarsOwned", "City", "EnglishCountryRegionName"}),
+				    MergedColumns = Table.CombineColumns(ColumnsSelected,{"FirstName", "MiddleName", "LastName"},Combiner.CombineTextByDelimiter(" ", QuoteStyle.None),"FullName"),
+				    RenamedColumns = Table.RenameColumns(MergedColumns,{{"EnglishEducation", "Education"}, {"EnglishOccupation", "Occupation"}, {"EnglishCountryRegionName", "CountryRegionName"}})
+				in
+				    RenamedColumns
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,148 @@
+{
+    "main": {
+        "_pyfabricops": {
+            "workspace_config": {
+                "workspace_id": "a6f837e7-7cd8-4ea7-bc5b-2898f3c85704",
+                "workspace_name": "_pyfabricops-PRD",
+                "workspace_description": "Continuous integration for library pyfabricops. Branch: main.",
+                "capacity_id": "7732a1eb-3893-4642-a85c-93fc3f35d076",
+                "capacity_region": "East US",
+                "workspace_roles": [
+                    {
+                        "user_uuid": "cbe83b10-3b7c-4479-8168-e5281fabf7ea",
+                        "user_type": "Group",
+                        "role": "Admin",
+                        "display_name": "AppFabricUsers",
+                        "group_type": "SecurityGroup",
+                        "email": null
+                    },
+                    {
+                        "user_uuid": "9322eb4a-4132-4bd1-8df1-5cd3d1d2400b",
+                        "user_type": "User",
+                        "role": "Admin",
+                        "display_name": "Alison Pezzott",
+                        "user_principal_name": "alison.pezzott@overdax.com"
+                    },
+                    {
+                        "user_uuid": "b025341a-965a-4c35-b12e-2af63e5eb58f",
+                        "user_type": "User",
+                        "role": "Contributor",
+                        "display_name": "Dev",
+                        "user_principal_name": "dev@overdax.com"
+                    },
+                    {
+                        "user_uuid": "bde43861-55e1-4144-b572-be115312967f",
+                        "user_type": "ServicePrincipal",
+                        "role": "Admin",
+                        "display_name": "AppFabric",
+                        "app_id": "7f3c52e1-46fa-4d5d-880b-c1e721a1f729"
+                    }
+                ]
+            },
+            "folders": {
+                "Orchestration": "a103c3ae-c6ff-4892-b5e3-2fd0ebc574dc",
+                "PowerBI": "3bd86f0e-a555-471d-bbe2-47bb7bc3539d",
+                "Storage": "f4812b7e-8ed9-4de8-a0b9-922cf47e86b5",
+                "PowerBI/DirectLake": "ae72e957-6c4b-44f7-9338-6d30d68fd1dd",
+                "PowerBI/Import": "38717aa4-14f0-4004-a239-13bcde71fdf3"
+            },
+            "lakehouses": {
+                "LakeUnique": {
+                    "id": "399ff0f0-fa34-4e5a-a481-c4424dfc3c9c",
+                    "description": "The unique lakehouse of the project.",
+                    "folder_id": "f4812b7e-8ed9-4de8-a0b9-922cf47e86b5",
+                    "sql_endpoint_id": "21e6be66-089b-44d9-8a4a-1b7ce071c527",
+                    "sql_endpoint_connection_string": "gvkmt76pz4cuhm2fs63qgxl5cy-4437rjwypstu5pc3fcmphscxaq.datawarehouse.fabric.microsoft.com"
+                }
+            },
+            "warehouses": {
+                "WareSecondary": {
+                    "id": "56a222c9-2e43-4318-8926-9d20a02c489f",
+                    "description": "The SQL storage for some specific analysis.",
+                    "folder_id": "f4812b7e-8ed9-4de8-a0b9-922cf47e86b5",
+                    "sql_endpoint_connection_string": "gvkmt76pz4cuhm2fs63qgxl5cy-4437rjwypstu5pc3fcmphscxaq.datawarehouse.fabric.microsoft.com"
+                }
+            },
+            "semantic_models": {
+                "GoldenDataset": {
+                    "id": "7e8dcabe-6f47-47da-8043-54b8959e182d",
+                    "description": "",
+                    "folder_id": "ae72e957-6c4b-44f7-9338-6d30d68fd1dd",
+                    "parameters": {}
+                },
+                "Sales": {
+                    "id": "7891bbf0-7327-44f4-9914-636721e4abd0",
+                    "description": "",
+                    "folder_id": "38717aa4-14f0-4004-a239-13bcde71fdf3",
+                    "parameters": {
+                        "Server": {
+                            "Value": "gvkmt76pz4cuhm2fs63qgxl5cy-4437rjwypstu5pc3fcmphscxaq.datawarehouse.fabric.microsoft.com",
+                            "IsParameterQuery": true,
+                            "IsParameterQueryRequired": false,
+                            "Type": "Text"
+                        },
+                        "Database": {
+                            "Value": "MainStorage",
+                            "IsParameterQuery": true,
+                            "IsParameterQueryRequired": false,
+                            "Type": "Text"
+                        }
+                    }
+                }
+            },
+            "reports": {
+                "CustomersAnalysis": {
+                    "id": "cd9bfcb2-e363-41e0-83ce-854b1444e8fd",
+                    "description": "",
+                    "folder_id": "ae72e957-6c4b-44f7-9338-6d30d68fd1dd",
+                    "parameters": {
+                        "workspace_name": "_pyfabricops-PRD",
+                        "semantic_model_name": "GoldenDataset",
+                        "semantic_model_id": "7e8dcabe-6f47-47da-8043-54b8959e182d"
+                    }
+                },
+                "ProductsAnalysis": {
+                    "id": "f4beb8d1-a58e-4709-91ca-d07c628c5bee",
+                    "description": "",
+                    "folder_id": "ae72e957-6c4b-44f7-9338-6d30d68fd1dd",
+                    "parameters": {
+                        "workspace_name": "_pyfabricops-PRD",
+                        "semantic_model_name": "GoldenDataset",
+                        "semantic_model_id": "7e8dcabe-6f47-47da-8043-54b8959e182d"
+                    }
+                },
+                "Sales": {
+                    "id": "7bf48685-903e-47cc-8ff5-f9c650f20811",
+                    "description": "",
+                    "folder_id": "38717aa4-14f0-4004-a239-13bcde71fdf3",
+                    "parameters": {
+                        "workspace_name": "_pyfabricops-PRD",
+                        "semantic_model_name": "Sales",
+                        "semantic_model_id": "7891bbf0-7327-44f4-9914-636721e4abd0"
+                    }
+                }
+            },
+            "data_pipelines": {
+                "CopyData": {
+                    "id": "bdec2331-bd1a-4ab9-aeeb-98ba54c2346f",
+                    "description": "Copy data from SQL Server to Lakehouse files.",
+                    "folder_id": "a103c3ae-c6ff-4892-b5e3-2fd0ebc574dc"
+                }
+            },
+            "notebooks": {
+                "TransformAndLoad": {
+                    "id": "899be837-ec9e-4769-8823-4206ade7c692",
+                    "description": "Transform and load from files to tables.",
+                    "folder_id": "a103c3ae-c6ff-4892-b5e3-2fd0ebc574dc"
+                }
+            },
+            "dataflows": {
+                "UpdateCalendar": {
+                    "id": "ad6111d0-5e05-4962-9772-9c5e2f177e16",
+                    "description": "Update the calendar table in the Lakehouse.",
+                    "folder_id": "a103c3ae-c6ff-4892-b5e3-2fd0ebc574dc"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,157 @@
+table DimDate
+	lineageTag: 443fdbdf-1171-44bb-a3ef-33634c02619c
+	dataCategory: Time
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 20d47367-fe96-4bdd-a384-0a0fe87dd743
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = User
+
+	column FullDateAlternateKey
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: 202c0229-293e-45a4-9e78-31962a5f7136
+		summarizeBy: none
+		sourceColumn: FullDateAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DayNumberOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: e93ae302-0e58-4ba8-bf6a-08c10b2c1985
+		summarizeBy: none
+		sourceColumn: DayNumberOfWeek
+
+		annotation SummarizationSetBy = User
+
+	column DayNameOfWeek
+		dataType: string
+		lineageTag: ee60b4dd-9837-42c7-a7a7-7ad70b3fde74
+		summarizeBy: none
+		sourceColumn: DayNameOfWeek
+		sortByColumn: DayNumberOfWeek
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayNumberOfMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: 832f2ed6-bd23-4078-b91e-b082adde8c31
+		summarizeBy: none
+		sourceColumn: DayNumberOfMonth
+
+		annotation SummarizationSetBy = User
+
+	column DayNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 721a68b6-0bad-4726-8672-a20d038df780
+		summarizeBy: none
+		sourceColumn: DayNumberOfYear
+
+		annotation SummarizationSetBy = User
+
+	column WeekNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 28949aeb-5830-4168-a80f-3d9d353daee4
+		summarizeBy: none
+		sourceColumn: WeekNumberOfYear
+
+		annotation SummarizationSetBy = User
+
+	column MonthName
+		dataType: string
+		lineageTag: b99fe0c6-a94d-4dba-ae38-aef6c563e807
+		summarizeBy: none
+		sourceColumn: MonthName
+		sortByColumn: MonthNumberOfYear
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: f1324cd7-e7ac-43a6-8384-2475b06f00e8
+		summarizeBy: none
+		sourceColumn: MonthNumberOfYear
+
+		annotation SummarizationSetBy = User
+
+	column CalendarQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 63c72d0c-1d56-45f1-967a-f7169afee212
+		summarizeBy: none
+		sourceColumn: CalendarQuarter
+
+		annotation SummarizationSetBy = User
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 7bdf810b-26c3-4c49-847d-b10aa0077ddc
+		summarizeBy: none
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = User
+
+	column CalendarSemester
+		dataType: int64
+		formatString: 0
+		lineageTag: c8a124b4-3d36-446d-bd9c-5e8fc7edfe05
+		summarizeBy: none
+		sourceColumn: CalendarSemester
+
+		annotation SummarizationSetBy = User
+
+	column FiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 0dbcbdd1-b9eb-458f-8304-dfbad9ec8f12
+		summarizeBy: none
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = User
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: c462a3a5-93b6-4261-89c7-40ab19044845
+		summarizeBy: none
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = User
+
+	column FiscalSemester
+		dataType: int64
+		formatString: 0
+		lineageTag: a02abce4-35b7-4a99-ba16-4d818e00f7d8
+		summarizeBy: none
+		sourceColumn: FiscalSemester
+
+		annotation SummarizationSetBy = User
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    dbo_DimDate = Source{[Schema="dbo",Item="DimDate"]}[Data]
+				in
+				    dbo_DimDate
+
+	annotation PBI_ResultType = Table
+

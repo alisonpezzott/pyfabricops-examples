@@ -1,0 +1,114 @@
+table DimProduct
+	lineageTag: f9235865-cc76-4ea7-87a4-1b95a1318fc2
+
+	column Category
+		dataType: string
+		lineageTag: b4b1ac4f-872b-4ae9-8240-6f892927b045
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcategory
+		dataType: string
+		lineageTag: 02c0fdda-5d37-4461-835a-719e8f0f4703
+		summarizeBy: none
+		sourceColumn: Subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 156b6e6d-1288-48c2-9c9e-bcd8965838b0
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: d58a9e3d-e781-4cbd-b33c-ef0f8b37998b
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: string
+		lineageTag: 2b87cbde-735e-4a63-9ac8-a3423b3d9c93
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column Size
+		dataType: string
+		lineageTag: 4b261fce-64a6-485e-8c40-815373f9b6ba
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation SummarizationSetBy = Automatic
+
+	column Class
+		dataType: string
+		lineageTag: ab60c2e1-c681-4ee3-a7d9-2925c235aeec
+		summarizeBy: none
+		sourceColumn: Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column Style
+		dataType: string
+		lineageTag: e199f939-f361-4d4c-b220-0a0adbcc7e58
+		summarizeBy: none
+		sourceColumn: Style
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModelName
+		dataType: string
+		lineageTag: 4140b521-965a-4f7a-adba-156a16c98d68
+		summarizeBy: none
+		sourceColumn: ModelName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LargePhoto
+		dataType: string
+		lineageTag: 5b2fb0fa-24b4-4597-8510-f212e1134853
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: LargePhoto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: b7c25367-895d-4cc8-9ebb-a56ef24b3424
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProduct = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    dbo_DimProductCategory = Source{[Schema="dbo",Item="DimProductCategory"]}[Data],
+				    ExpandedDimProductSubcategory = Table.ExpandTableColumn(dbo_DimProductCategory, "DimProductSubcategory", {"EnglishProductSubcategoryName", "DimProduct"}, {"EnglishProductSubcategoryName", "DimProduct"}),
+				    ExpandedDimProduct = Table.ExpandTableColumn(ExpandedDimProductSubcategory, "DimProduct", {"ProductKey", "EnglishProductName", "Color", "Size", "Class", "Style", "ModelName", "LargePhoto", "EnglishDescription"}, {"ProductKey", "EnglishProductName", "Color", "Size", "Class", "Style", "ModelName", "LargePhoto", "EnglishDescription"}),
+				    SelectedColumns = Table.SelectColumns(ExpandedDimProduct,{"EnglishProductCategoryName", "EnglishProductSubcategoryName", "ProductKey", "EnglishProductName", "Color", "Size", "Class", "Style", "ModelName", "LargePhoto", "EnglishDescription"}),
+				    PhotoBinaryToBase64 = Table.TransformColumns(SelectedColumns, {{"LargePhoto", each
+				        "data:image/png;base64," &
+				        Binary.ToText(_, BinaryEncoding.Base64),
+				      type text}}),
+				    RenamedColumns = Table.RenameColumns(PhotoBinaryToBase64,{{"EnglishDescription", "Description"}, {"EnglishProductName", "Product"}, {"EnglishProductSubcategoryName", "Subcategory"}, {"EnglishProductCategoryName", "Category"}})
+				in
+				    RenamedColumns
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

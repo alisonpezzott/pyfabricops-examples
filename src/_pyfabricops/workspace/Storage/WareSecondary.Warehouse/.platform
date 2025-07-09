@@ -1,0 +1,7 @@
+{
+    "metadata": {
+        "type": "warehouse",
+        "displayName": "WareSecondary",
+        "description": "The SQL storage for some specific analysis."
+    }
+}
