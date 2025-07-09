@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.59\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"visible\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "c28b4040752200061cd7",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"360b52142aae33471608\",\"layouts\":[{\"id\":0,\"position\":{\"x\":129.1607973116052,\"y\":254.5504764535285,\"z\":0,\"width\":478.9320075496018,\"height\":416.70855774985034,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"FactInternetSales.Sales Amount\"}],\"Category\":[{\"queryRef\":\"DimProduct.ProductSubcategoyName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Sales Amount\"},\"Name\":\"FactInternetSales.Sales Amount\",\"NativeReferenceName\":\"Sales Amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductSubcategoyName\"},\"Name\":\"DimProduct.ProductSubcategoyName\",\"NativeReferenceName\":\"ProductSubcategoyName\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Sales Amount\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 416.71,
+          "width": 478.93,
+          "x": 129.16,
+          "y": 254.55,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"3af4a8941968ed502892\",\"layouts\":[{\"id\":0,\"position\":{\"x\":136.70303365096902,\"y\":33.940063527137134,\"z\":2,\"width\":478.9320075496018,\"height\":197.98370390829993,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DimProduct.ProductCategoryName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductCategoryName\"},\"Name\":\"DimProduct.ProductCategoryName\",\"NativeReferenceName\":\"ProductCategoryName\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[{\"name\":\"0e81543d903d42411bdb\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"FactInternetSales\"}},\"Property\":\"Sales Amount\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Sales Amount\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":true,\"isLockedInViewMode\":true}]",
+          "height": 197.98,
+          "width": 478.93,
+          "x": 136.70,
+          "y": 33.94,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"df0e4a16b0e090590d3d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":723.111909036505,\"y\":33.940063527137134,\"z\":1,\"width\":391.2535101044975,\"height\":637.3189706762417,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"FactInternetSales.Sales Amount\"}],\"Rows\":[{\"queryRef\":\"DimProduct.ProductName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Sales Amount\"},\"Name\":\"FactInternetSales.Sales Amount\",\"NativeReferenceName\":\"Sales Amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ProductName\"},\"Name\":\"DimProduct.ProductName\",\"NativeReferenceName\":\"ProductName\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Sales Amount\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 637.32,
+          "width": 391.25,
+          "x": 723.11,
+          "y": 33.94,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
