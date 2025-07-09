@@ -1,5 +1,10 @@
 [
     {
+        "user_uuid": "cbe83b10-3b7c-4479-8168-e5281fabf7ea",
+        "user_type": "Group",
+        "role": "Admin"
+    },
+    {
         "user_uuid": "9322eb4a-4132-4bd1-8df1-5cd3d1d2400b",
         "user_type": "User",
         "role": "Admin"
@@ -10,8 +15,8 @@
         "role": "Contributor"
     },
     {
-        "user_uuid": "cbe83b10-3b7c-4479-8168-e5281fabf7ea",
-        "user_type": "Group",
+        "user_uuid": "bde43861-55e1-4144-b572-be115312967f",
+        "user_type": "ServicePrincipal",
         "role": "Admin"
     }
 ]
