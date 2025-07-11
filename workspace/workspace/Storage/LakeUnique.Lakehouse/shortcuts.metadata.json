@@ -1,0 +1,15 @@
+[
+  {
+    "name": "CurrentDate",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "itemId": "56a222c9-2e43-4318-8926-9d20a02c489f",
+        "path": "Tables/dbo/CurrentDate",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Warehouse"
+      }
+    }
+  }
+]
