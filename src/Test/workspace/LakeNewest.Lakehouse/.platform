@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "LakeNewest",
+    "description": ""
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "12345678-1234-1234-1234-123456789012"
+  }
+}
