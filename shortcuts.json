@@ -1,0 +1,16 @@
+{
+  "shortcuts": [
+    {
+      "name": "CurrentDate",
+      "path": "/Tables",
+      "target": {
+        "type": "OneLake",
+        "oneLake": {
+          "itemId": "56a222c9-2e43-4318-8926-9d20a02c489f",
+          "path": "Tables/dbo/CurrentDate",
+          "workspaceId": "a6f837e7-7cd8-4ea7-bc5b-2898f3c85704"
+        }
+      }
+    }
+  ]
+}
