@@ -3,5 +3,9 @@
         "type": "Lakehouse",
         "displayName": "LakeNew",
         "description": ""
-    }
+    },
+    "config": {
+        "version": "2.0",
+        "logicalId": ""
+  }
 }
