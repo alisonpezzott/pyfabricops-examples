@@ -11,13 +11,6 @@
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
     "sourceQueryCulture": "en-US",
-    "expressions": [
-      {
-        "name": "DatabaseQuery",
-        "kind": "m",
-        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
-      }
-    ],
     "annotations": [
       {
         "name": "__PBI_TimeIntelligenceEnabled",
