@@ -1,0 +1,109 @@
+{
+    "dev": {
+        "PowerBIDemo": {
+            "workspace_config": {
+                "workspace_id": "de8f92a3-5b98-461a-b27d-c8a1c60c0cfc",
+                "workspace_name": "PowerBIDemo-DEV",
+                "workspace_description": "First Power BI Project with PyFabricOps",
+                "capacity_id": "",
+                "capacity_region": null,
+                "workspace_roles": [
+                    {
+                        "user_uuid": "cbe83b10-3b7c-4479-8168-e5281fabf7ea",
+                        "user_type": "Group",
+                        "role": "Admin",
+                        "display_name": "AppFabricUsers",
+                        "group_type": "SecurityGroup",
+                        "email": null
+                    },
+                    {
+                        "user_uuid": "9322eb4a-4132-4bd1-8df1-5cd3d1d2400b",
+                        "user_type": "User",
+                        "role": "Admin",
+                        "display_name": "Alison Pezzott",
+                        "user_principal_name": "alison.pezzott@overdax.com"
+                    },
+                    {
+                        "user_uuid": "b025341a-965a-4c35-b12e-2af63e5eb58f",
+                        "user_type": "User",
+                        "role": "Contributor",
+                        "display_name": "Dev",
+                        "user_principal_name": "dev@overdax.com"
+                    },
+                    {
+                        "user_uuid": "bde43861-55e1-4144-b572-be115312967f",
+                        "user_type": "ServicePrincipal",
+                        "role": "Admin",
+                        "display_name": "AppFabric",
+                        "app_id": "7f3c52e1-46fa-4d5d-880b-c1e721a1f729"
+                    }
+                ]
+            },
+            "folders": {
+                "Customers": "a35847fe-287f-48a8-970b-0f99d4ab1716",
+                "Main": "99bd2d0d-bbc4-44f6-914c-e54e73a886a8"
+            },
+            "dataflows_gen1": {
+                "Calendar": {
+                    "id": "267d3f91-6fc4-4cdf-8af2-1194231adacb",
+                    "description": "Global calendar of project."
+                }
+            },
+            "semantic_models": {
+                "Sales": {
+                    "parameters": {
+                        "Server": {
+                            "Value": "PEZZOTT",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "Database": {
+                            "Value": "AdventureWorksDW2022-DEV",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "CalendarWorkspaceId": {
+                            "Value": "de8f92a3-5b98-461a-b27d-c8a1c60c0cfc",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "CalendarDataflowId": {
+                            "Value": "267d3f91-6fc4-4cdf-8af2-1194231adacb",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        }
+                    },
+                    "id": "fd82ce20-ddd2-4aae-b2a5-1a1c483a13bc",
+                    "description": "",
+                    "folder_id": "99bd2d0d-bbc4-44f6-914c-e54e73a886a8"
+                }
+            },
+            "reports": {
+                "Customers": {
+                    "id": "2ec4c2a1-cd56-4802-b6b3-d36f8bb3076f",
+                    "description": "",
+                    "folder_id": "a35847fe-287f-48a8-970b-0f99d4ab1716",
+                    "parameters": {
+                        "workspace_name": "PowerBIDemo-DEV",
+                        "semantic_model_name": "Sales",
+                        "semantic_model_id": "fd82ce20-ddd2-4aae-b2a5-1a1c483a13bc"
+                    }
+                },
+                "Sales": {
+                    "id": "92649f4d-220f-443a-9a8f-6d0986bdc946",
+                    "description": "",
+                    "folder_id": "99bd2d0d-bbc4-44f6-914c-e54e73a886a8",
+                    "parameters": {
+                        "workspace_name": "PowerBIDemo-DEV",
+                        "semantic_model_name": "Sales",
+                        "semantic_model_id": "fd82ce20-ddd2-4aae-b2a5-1a1c483a13bc"
+                    }
+                }
+            }
+        }
+    }
+}
