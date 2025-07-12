@@ -3,10 +3,10 @@
   "version": "4.0",
   "datasetReference": {
     "byConnection": {
-      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/myorg/PowerBIDemo-DEV;initial catalog=Sales;integrated security=ClaimsToken",
+      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/myorg/PowerBIDemo-PRD;initial catalog=Sales;integrated security=ClaimsToken",
       "pbiServiceModelId": null,
       "pbiModelVirtualServerName": "sobe_wowvirtualserver",
-      "pbiModelDatabaseName": "fd82ce20-ddd2-4aae-b2a5-1a1c483a13bc",
+      "pbiModelDatabaseName": "7a5ee304-c81f-441d-afe3-53d26aa4af98",
       "name": "EntityDataSource",
       "connectionType": "pbiServiceXmlaStyleLive"
     }
