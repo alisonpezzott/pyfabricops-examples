@@ -1,0 +1,12 @@
+{
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "WareTerciary",
+    "description": "The SQL storage for some specific analysis."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6904b16d-99cd-4a3b-a893-820f2a105ab2"
+  },
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json"
+}
