@@ -1,11 +1,11 @@
 {
     "sql_on_premises_connections": {
-        "AdventureWorksDW2022": {
-            "connection_id": "",
-            "display_name": "AdventureWorksDW2022",
+        "AdventureWorksDW2022-PRD": {
+            "connection_id": "25c39679-c050-4b46-a7e3-6d2915a9542a",
+            "display_name": "AdventureWorksDW2022-PRD",
             "gateway_id": "7a27d5f4-081f-446c-90dd-031835787c0c",
             "server": "PEZZOTT",
-            "database": "AdventureWorksDW2022",
+            "database": "AdventureWorksDW2022-PRD",
             "credential_type": "Basic",
             "privacy_level": "Organizational",
             "connection_encryption": "NotEncrypted",
@@ -28,12 +28,12 @@
                 }
             ]
         },
-        "AdventureWorksDW2022Copy": {
-            "connection_id": "",
-            "display_name": "AdventureWorksDW2022Copy",
+        "AdventureWorksDW2022-DEV": {
+            "connection_id": "2411a00d-8722-46cc-abef-7298906bd27d",
+            "display_name": "AdventureWorksDW2022-DEV",
             "gateway_id": "7a27d5f4-081f-446c-90dd-031835787c0c",
             "server": "PEZZOTT",
-            "database": "AdventureWorksDW2022",
+            "database": "AdventureWorksDW2022-DEV",
             "credential_type": "Basic",
             "privacy_level": "Organizational",
             "connection_encryption": "NotEncrypted",
@@ -88,12 +88,12 @@
     },
     "github_source_control_connection": {
         "connection_id": "",
-        "display_name": "py-fab-examples",
-        "repository": "https://github.com/alisonpezzott/py-fab-examples",
+        "display_name": "pyfabricops-examples",
+        "repository": "https://github.com/alisonpezzott/pyfabricops-examples",
         "owner_name": "alisonpezzott",
-        "repository_name": "py-fab-examples",
+        "repository_name": "pyfabricops-examples",
         "branch_name": "main",
-        "directory_name": "src/01_fabric_simple/workspace",
+        "directory_name": "src/{project_name}/workspace",
         "roles": [
             {
                 "user_uuid": "9322eb4a-4132-4bd1-8df1-5cd3d1d2400b",

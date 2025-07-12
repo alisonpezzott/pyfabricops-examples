@@ -1,0 +1,18 @@
+[
+    {
+        "Galaxy Book3 Ultra": {
+            "displayName": "Galaxy Book3 Ultra",
+            "numberOfMemberGateways": 1,
+            "loadBalancingSetting": "DistributeEvenly",
+            "allowCloudConnectionRefresh": true,
+            "allowCustomConnectors": true,
+            "publicKey": {
+                "exponent": "AQAB",
+                "modulus": "u72k3I66vqZwdtHYTeSu6eTnXARnYwifvxHh3l34xmX0Iwpjr9Qpl5TTbcA7WeAY/Sln0UjhFz2TeamwcYwlKr8uByaWEiV5googZRD0YWsNcrjk8UJcUy3uZs9n5UMBWhylneHsQKUKH0UQNVxNov7g+pKnWTfGHvZBgkz2RN/FGpv1lVRLagfLBrs9ZX9/CW29sFqNElE5D2+AN8yC+Wko37f4zjhuNSg1mDhyLS5GduArxieiyRhWvJDARoR+8/zP3OCR4Hbt72aWdY0PSa97wxiTlBXio8k2++09TVaikRfHLbEJ9JQ7rQGvoROcgrjB5ldcBLaPptsGVpbwlQ=="
+            },
+            "version": "3000.274.3",
+            "id": "7a27d5f4-081f-446c-90dd-031835787c0c",
+            "type": "OnPremises"
+        }
+    }
+]
