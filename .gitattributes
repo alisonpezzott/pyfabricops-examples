@@ -1,0 +1,4 @@
+src/**/config.json merge=union
+# This file is used to define attributes for paths in the repository.
+# The 'merge=union' attribute allows for union merging of JSON files in the 'src' directory.
+# This means that when merging changes, if there are conflicts, the resulting file will contain all unique elements from the conflicting files.
