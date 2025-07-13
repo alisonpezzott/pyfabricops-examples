@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 475.83331298828125
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 50.000000000000014,
+            "y": 657.395096603216
+          },
+          "nodeIndex": "DimCustomer",
+          "nodeLineageTag": "3dc1bb4c-7b84-4790-986b-867f517cd50f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 525.36217066422319,
+            "y": 645.11121584652813
+          },
+          "nodeIndex": "DimDate",
+          "nodeLineageTag": "aa119399-4a4c-4cdf-adcf-28a6aa70aab0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 61.36706477279273,
+            "y": -50
+          },
+          "nodeIndex": "DimProduct",
+          "nodeLineageTag": "f9235865-cc76-4ea7-87a4-1b95a1318fc2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 240.40496301879224,
+            "y": 303.69817239988271
+          },
+          "nodeIndex": "FactInternetSales",
+          "nodeLineageTag": "d249f991-b847-4e8c-8ca4-0c5ee7015ab5",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
