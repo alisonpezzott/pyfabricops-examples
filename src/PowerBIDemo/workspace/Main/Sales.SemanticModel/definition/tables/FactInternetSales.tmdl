@@ -12,6 +12,12 @@ table FactInternetSales
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
+	measure Orders = ```
+			DISTINCTCOUNT('FactInternetSales'[SalesOrderNumber])  
+			```
+		formatString: #,0
+		lineageTag: 954b60ab-0284-4598-a135-eddef2fddccf
+
 	column ProductKey
 		dataType: int64
 		isHidden
