@@ -1,0 +1,64 @@
+name: Deploy Power BI
+
+on: 
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [main, dev]  
+
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'main'
+        type: choice
+        options:
+        - main
+        - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.inputs.branch || github.ref }}
+
+    - name: Display deployment info
+      run: |
+        echo "Deploying branch: ${{ github.event.inputs.branch || github.ref_name }}"
+        echo "Triggered by: ${{ github.event_name }}"
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+    
+    - name: Install dependencies
+      run: |
+        pip install pyfabricops python-dotenv
+        pip list
+    
+    - name: Run Power BI deployment script
+      env:
+        FAB_CLIENT_ID: ${{ secrets.FAB_CLIENT_ID }}
+        FAB_CLIENT_SECRET: ${{ secrets.FAB_CLIENT_SECRET }}
+        FAB_TENANT_ID: ${{ secrets.FAB_TENANT_ID }}
+        FAB_USERNAME: ${{ secrets.FAB_USERNAME }}
+        FAB_PASSWORD: ${{ secrets.FAB_PASSWORD }}
+        AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+        AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+        AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+        AZURE_KEY_VAULT_NAME: ${{ secrets.AZURE_KEY_VAULT_NAME }}
+        DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
+        DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: python scripts/008_deploy_powerbi_cicd.py
+
+    - name: Commit changes
+      run: |
+        git config --local user.name "GitHub Actions"
+        git config --local user.email "actions@github.com"
+        git add .
+        git commit -m "Deploy Power BI changes" || echo "No changes to commit"
