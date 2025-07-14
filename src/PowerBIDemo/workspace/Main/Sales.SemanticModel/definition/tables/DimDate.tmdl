@@ -1,0 +1,1195 @@
+table DimDate
+	lineageTag: aa119399-4a4c-4cdf-adcf-28a6aa70aab0
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: 6fee1ae6-7211-4c97-9982-2e67f83f4d74
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DateIndex
+		dataType: int64
+		formatString: 0
+		displayFolder: Date
+		lineageTag: fb777e5a-bd9a-495c-b307-d1845ba70803
+		summarizeBy: none
+		sourceColumn: DateIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column DaysToToday
+		dataType: int64
+		formatString: 0
+		displayFolder: Date
+		lineageTag: d2b88399-1a27-4b82-b38f-b62803c9c060
+		summarizeBy: none
+		sourceColumn: DaysToToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentDate
+		dataType: string
+		displayFolder: Date
+		lineageTag: 6cd1abed-db85-435e-83c2-565c35abfb24
+		summarizeBy: none
+		sourceColumn: CurrentDate
+		sortByColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		displayFolder: Year
+		lineageTag: 65515f04-7d67-41e5-89af-d4cef91a2ee9
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearStart
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Year
+		lineageTag: ba9e9fa8-75a7-425a-a61c-c3bf6b2bedb7
+		summarizeBy: none
+		sourceColumn: YearStart
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YearEnd
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Year
+		lineageTag: e6bdfbc8-d3a4-4bd8-9756-1c5f2d69421b
+		summarizeBy: none
+		sourceColumn: YearEnd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YearIndex
+		dataType: int64
+		formatString: 0
+		displayFolder: Year
+		lineageTag: 336aa62d-0d51-4b3f-ad46-c6b85785d2b1
+		summarizeBy: none
+		sourceColumn: YearIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearDescendingName
+		dataType: int64
+		formatString: 0
+		displayFolder: Year
+		lineageTag: a7181cc3-7066-4750-be75-969bc4f0bdd5
+		summarizeBy: none
+		sourceColumn: YearDescendingName
+		sortByColumn: YearDescendingNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearDescendingNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Year
+		lineageTag: f232467a-588d-4ddd-ac60-077845af46ff
+		summarizeBy: none
+		sourceColumn: YearDescendingNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsToToday
+		dataType: int64
+		formatString: 0
+		displayFolder: Year
+		lineageTag: d1ba8d5f-94b7-4048-9745-535028ea8b8a
+		summarizeBy: none
+		sourceColumn: YearsToToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentYear
+		dataType: string
+		displayFolder: Year
+		lineageTag: 5f811588-cc6f-444b-a4fe-e62a29f5a87e
+		summarizeBy: none
+		sourceColumn: CurrentYear
+		sortByColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfMonth
+		dataType: int64
+		formatString: 0
+		displayFolder: Day
+		lineageTag: e12c9f1a-a03b-4869-91ce-d0f8cf038cd6
+		summarizeBy: none
+		sourceColumn: DayOfMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfYear
+		dataType: int64
+		formatString: 0
+		displayFolder: Day
+		lineageTag: d2183056-d637-415a-92ee-1c1cb6e0a44f
+		summarizeBy: none
+		sourceColumn: DayOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeekNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Day
+		lineageTag: f3c83a96-386d-4bc9-95d3-d664f4eaffda
+		summarizeBy: none
+		sourceColumn: DayOfWeekNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeekName
+		dataType: string
+		displayFolder: Day
+		lineageTag: 9acc9794-2633-4005-8aac-b68d7993debc
+		summarizeBy: none
+		sourceColumn: DayOfWeekName
+		sortByColumn: DayOfWeekNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeekNameShort
+		dataType: string
+		displayFolder: Day
+		lineageTag: 21576ed5-c8f6-40b9-be5d-979ae763bca5
+		summarizeBy: none
+		sourceColumn: DayOfWeekNameShort
+		sortByColumn: DayOfWeekNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeekNameInitials
+		dataType: string
+		displayFolder: Day
+		lineageTag: 334e6b91-4ed0-4b48-abe7-4b6530efc3cd
+		summarizeBy: none
+		sourceColumn: DayOfWeekNameInitials
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Month
+		lineageTag: f18c3354-5838-404a-ab7b-c80ee52dec78
+		summarizeBy: none
+		sourceColumn: MonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		displayFolder: Month
+		lineageTag: 6067b6dc-69e2-4715-bdbe-f60a3cd81a8c
+		summarizeBy: none
+		sourceColumn: MonthName
+		sortByColumn: MonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNameShort
+		dataType: string
+		displayFolder: Month
+		lineageTag: 2cdc3d08-2db9-46e4-b546-ae78f0f5b690
+		summarizeBy: none
+		sourceColumn: MonthNameShort
+		sortByColumn: MonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNameInitials
+		dataType: string
+		displayFolder: Month
+		lineageTag: 527f5cd6-643a-48c9-9fe4-4bf7c941a76b
+		summarizeBy: none
+		sourceColumn: MonthNameInitials
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthYearName
+		dataType: string
+		displayFolder: Month
+		lineageTag: 1d36afa5-58e2-4b2d-8285-5888eca398e5
+		summarizeBy: none
+		sourceColumn: MonthYearName
+		sortByColumn: MonthYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthYearNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Month
+		lineageTag: 242ef1f7-0ca2-4ae4-9a5c-be74b7e48f60
+		summarizeBy: none
+		sourceColumn: MonthYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthDayNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Month
+		lineageTag: 76ebca29-0b16-4010-ab2c-933477ee095f
+		summarizeBy: none
+		sourceColumn: MonthDayNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthDayName
+		dataType: string
+		displayFolder: Month
+		lineageTag: cad89215-7c9a-48c4-8746-029ed493db7c
+		summarizeBy: none
+		sourceColumn: MonthDayName
+		sortByColumn: MonthDayNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthStart
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Month
+		lineageTag: 9e17d136-7c66-4b81-9623-d7603eba409d
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MonthEnd
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Month
+		lineageTag: ba788f04-ebda-4827-b810-bd678b563ad1
+		summarizeBy: none
+		sourceColumn: MonthEnd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MonthIndex
+		dataType: int64
+		formatString: 0
+		displayFolder: Month
+		lineageTag: 9a3d8352-cefd-4786-af88-49f48015024b
+		summarizeBy: none
+		sourceColumn: MonthIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthsToToday
+		dataType: int64
+		formatString: 0
+		displayFolder: Month
+		lineageTag: 4a940a14-e811-4f3e-af6b-fef279c15ad5
+		summarizeBy: none
+		sourceColumn: MonthsToToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentMonthName
+		dataType: string
+		displayFolder: Month
+		lineageTag: 3014de67-93ae-4dec-a38d-8c27cf9ede99
+		summarizeBy: none
+		sourceColumn: CurrentMonthName
+		sortByColumn: MonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentMonthNameShort
+		dataType: string
+		displayFolder: Month
+		lineageTag: 11985cea-43b1-4b4a-b50a-a7c48a2d3872
+		summarizeBy: none
+		sourceColumn: CurrentMonthNameShort
+		sortByColumn: MonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentMonthYearName
+		dataType: string
+		displayFolder: Month
+		lineageTag: 3e5ee90a-4680-498b-8329-238a097dd2a9
+		summarizeBy: none
+		sourceColumn: CurrentMonthYearName
+		sortByColumn: MonthYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Quarter
+		lineageTag: 78aa1cff-de3c-46f4-b5b8-4ca30511c4ad
+		summarizeBy: none
+		sourceColumn: QuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterName
+		dataType: string
+		displayFolder: Quarter
+		lineageTag: 88fc7719-ec94-43c9-aecb-11185aafde67
+		summarizeBy: none
+		sourceColumn: QuarterName
+		sortByColumn: QuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterYearName
+		dataType: string
+		displayFolder: Quarter
+		lineageTag: 09d965e6-9830-454e-8cfb-e12218585540
+		summarizeBy: none
+		sourceColumn: QuarterYearName
+		sortByColumn: QuarterYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterYearNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Quarter
+		lineageTag: cb46f8f8-458c-43d2-9cbf-89183a7eeb45
+		summarizeBy: none
+		sourceColumn: QuarterYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterStart
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Quarter
+		lineageTag: 8eb625bf-479b-456a-a790-36907bb8a599
+		summarizeBy: none
+		sourceColumn: QuarterStart
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column QuarterEnd
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Quarter
+		lineageTag: d09fd2e7-86e3-4f56-bbce-4f4974b86423
+		summarizeBy: none
+		sourceColumn: QuarterEnd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column QuarterIndex
+		dataType: int64
+		formatString: 0
+		displayFolder: Quarter
+		lineageTag: 3b6cd4ea-1922-49d5-997b-9bc0806bcdc0
+		summarizeBy: none
+		sourceColumn: QuarterIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuartersToToday
+		dataType: int64
+		formatString: 0
+		displayFolder: Quarter
+		lineageTag: 95c05935-1721-4681-aaf9-bb19feb64825
+		summarizeBy: none
+		sourceColumn: QuartersToToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentQuarter
+		dataType: string
+		displayFolder: Quarter
+		lineageTag: 67b1260e-d37e-4411-828d-7010967515f1
+		summarizeBy: none
+		sourceColumn: CurrentQuarter
+		sortByColumn: QuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentQuarterYear
+		dataType: string
+		displayFolder: Quarter
+		lineageTag: 8bd9b0f1-45a8-4ab8-aae6-1eb04bbfb2dc
+		summarizeBy: none
+		sourceColumn: CurrentQuarterYear
+		sortByColumn: QuarterYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthOfQuarterNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Month
+		lineageTag: c8be89a3-b440-4aa4-9e70-ade5917b8df2
+		summarizeBy: none
+		sourceColumn: MonthOfQuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekOfYearNumberISO
+		dataType: int64
+		formatString: 0
+		displayFolder: Week
+		lineageTag: 7b4bee4c-f693-454b-b270-b1fd090b9da1
+		summarizeBy: none
+		sourceColumn: WeekOfYearNumberISO
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearISO
+		dataType: int64
+		formatString: 0
+		displayFolder: Week
+		lineageTag: b2759ad2-e431-4d96-bdea-94101a2ccb10
+		summarizeBy: none
+		sourceColumn: YearISO
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekYearNumberISO
+		dataType: int64
+		formatString: 0
+		displayFolder: Week
+		lineageTag: 0f65316f-d62f-4c68-b835-0e19fc931a48
+		summarizeBy: none
+		sourceColumn: WeekYearNumberISO
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekYearNameISO
+		dataType: string
+		displayFolder: Week
+		lineageTag: 90c735da-afff-4a13-8706-4c2b0ad490c6
+		summarizeBy: none
+		sourceColumn: WeekYearNameISO
+		sortByColumn: WeekYearNumberISO
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekStartISO
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Week
+		lineageTag: a9380297-5563-4e43-a296-0a09389b6d90
+		summarizeBy: none
+		sourceColumn: WeekStartISO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column WeekEndISO
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Week
+		lineageTag: d891c98f-f9ac-44f7-8398-c4e8996d641a
+		summarizeBy: none
+		sourceColumn: WeekEndISO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column WeekIndexISO
+		dataType: int64
+		formatString: 0
+		displayFolder: Week
+		lineageTag: da6f4146-066e-47b8-b54f-3c013a4e1be1
+		summarizeBy: none
+		sourceColumn: WeekIndexISO
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeeksToTodayISO
+		dataType: int64
+		formatString: 0
+		displayFolder: Week
+		lineageTag: ec5b33ac-bf3d-4365-8fcb-3130db4af888
+		summarizeBy: none
+		sourceColumn: WeeksToTodayISO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentWeekISO
+		dataType: string
+		displayFolder: Week
+		lineageTag: 9a04c7f8-e1cb-41c4-a1aa-1b68be7340e7
+		summarizeBy: none
+		sourceColumn: CurrentWeekISO
+		sortByColumn: WeekYearNumberISO
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekPeriodName
+		dataType: string
+		displayFolder: Week
+		lineageTag: d4392fd7-4a9a-40fe-9a55-6c0bc920b82f
+		summarizeBy: none
+		sourceColumn: WeekPeriodName
+		sortByColumn: WeekYearNumberISO
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekOfMonthNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Week
+		lineageTag: 0ec1e141-c5c7-42b9-8ff8-252ece91d57d
+		summarizeBy: none
+		sourceColumn: WeekOfMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column HalfNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Half
+		lineageTag: d991b0c5-1e11-4675-b40c-12e200006974
+		summarizeBy: none
+		sourceColumn: HalfNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column HalfYearName
+		dataType: string
+		displayFolder: Half
+		lineageTag: 9f505a4a-25e5-4999-b08a-92c2fe139562
+		summarizeBy: none
+		sourceColumn: HalfYearName
+		sortByColumn: HalfYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column HalfYearNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Half
+		lineageTag: fd740660-e031-44a3-8adf-5cd892d697fe
+		summarizeBy: none
+		sourceColumn: HalfYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column HalfIndex
+		dataType: int64
+		formatString: 0
+		displayFolder: Half
+		lineageTag: 5227c8ab-6904-4b48-bb9c-33f009fe0405
+		summarizeBy: none
+		sourceColumn: HalfIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column HalfsToToday
+		dataType: int64
+		formatString: 0
+		displayFolder: Half
+		lineageTag: b91db57d-5432-40ad-9606-973c33d688a2
+		summarizeBy: none
+		sourceColumn: HalfsToToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentHalf
+		dataType: string
+		displayFolder: Half
+		lineageTag: 6742182e-4b80-4262-b593-9eadac41961f
+		summarizeBy: none
+		sourceColumn: CurrentHalf
+		sortByColumn: HalfYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column BimesterNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Bimester
+		lineageTag: 58c473a6-39ab-4366-9ef4-a7caa05c2156
+		summarizeBy: none
+		sourceColumn: BimesterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column BimesterYearName
+		dataType: string
+		displayFolder: Bimester
+		lineageTag: a0bd0118-9c76-4725-969a-0a5129a2e25d
+		summarizeBy: none
+		sourceColumn: BimesterYearName
+		sortByColumn: BimesterYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column BimesterYearNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Bimester
+		lineageTag: e11efed9-1091-4088-9ab6-34a8ebd52ab0
+		summarizeBy: none
+		sourceColumn: BimesterYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column BimesterIndex
+		dataType: int64
+		formatString: 0
+		displayFolder: Bimester
+		lineageTag: 931384aa-beaf-40e3-ae7c-d96ff69369d6
+		summarizeBy: none
+		sourceColumn: BimesterIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column BimestersToToday
+		dataType: int64
+		formatString: 0
+		displayFolder: Bimester
+		lineageTag: 9720125c-dda2-40f1-ab8f-586651e94bb2
+		summarizeBy: none
+		sourceColumn: BimestersToToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentBimester
+		dataType: string
+		displayFolder: Bimester
+		lineageTag: 9ac8d612-a54f-45c1-9b9e-b63501d8d12a
+		summarizeBy: none
+		sourceColumn: CurrentBimester
+		sortByColumn: BimesterYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FortnightOfMonthNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Fortnight
+		lineageTag: a1291e67-74f4-463f-97a5-52d091438e0c
+		summarizeBy: none
+		sourceColumn: FortnightOfMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FortnightMonthNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Fortnight
+		lineageTag: 94d280bc-b432-4555-a8f3-9b9478574e34
+		summarizeBy: none
+		sourceColumn: FortnightMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FortnightMonthName
+		dataType: string
+		displayFolder: Fortnight
+		lineageTag: 28e927cf-7e19-42eb-b9b7-6bbad3079d4a
+		summarizeBy: none
+		sourceColumn: FortnightMonthName
+		sortByColumn: FortnightMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FortnightMonthYearNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Fortnight
+		lineageTag: dae366c5-affa-40ff-a40e-7e04a1e4c1d1
+		summarizeBy: none
+		sourceColumn: FortnightMonthYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FortnightMonthYearName
+		dataType: string
+		displayFolder: Fortnight
+		lineageTag: 356cc485-3f58-4b3f-9321-bcac217a49c8
+		summarizeBy: none
+		sourceColumn: FortnightMonthYearName
+		sortByColumn: FortnightMonthYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FortnightIndex
+		dataType: int64
+		formatString: 0
+		displayFolder: Fortnight
+		lineageTag: b37160f0-ca9c-4a9c-bb22-71b7458529fb
+		summarizeBy: none
+		sourceColumn: FortnightIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column FortnightsToToday
+		dataType: int64
+		formatString: 0
+		displayFolder: Fortnight
+		lineageTag: ab49ae48-4fd9-4bdd-aa34-5b2200a7a375
+		summarizeBy: none
+		sourceColumn: FortnightsToToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentFortnight
+		dataType: string
+		displayFolder: Fortnight
+		lineageTag: e62f01d4-56bf-42bd-8a7f-7f370c4e451e
+		summarizeBy: none
+		sourceColumn: CurrentFortnight
+		sortByColumn: FortnightMonthYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClosingDateRef
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: Closing
+		lineageTag: a9407263-b4b3-444c-bd5d-138d300d6ef4
+		summarizeBy: none
+		sourceColumn: ClosingDateRef
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ClosingYear
+		dataType: int64
+		formatString: 0
+		displayFolder: Closing
+		lineageTag: afeab96b-1532-4452-b58a-861b7b84b2b5
+		summarizeBy: none
+		sourceColumn: ClosingYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClosingMonthName
+		dataType: string
+		displayFolder: Closing
+		lineageTag: 94b20803-eea6-4bbc-84c1-8fa2a9c05635
+		summarizeBy: none
+		sourceColumn: ClosingMonthName
+		sortByColumn: ClosingMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClosingMonthNameShort
+		dataType: string
+		displayFolder: Closing
+		lineageTag: c6eef69c-62f5-475d-9cf1-f5cd3043310f
+		summarizeBy: none
+		sourceColumn: ClosingMonthNameShort
+		sortByColumn: ClosingMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClosingMonthNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Closing
+		lineageTag: d2417fae-22f1-47e1-8df3-b895655166f5
+		summarizeBy: none
+		sourceColumn: ClosingMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClosingMonthYearName
+		dataType: string
+		displayFolder: Closing
+		lineageTag: b0a5b790-8668-48b8-a905-bb49c3664e9b
+		summarizeBy: none
+		sourceColumn: ClosingMonthYearName
+		sortByColumn: ClosingMonthYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClosingMonthYearNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Closing
+		lineageTag: 0b4b70e0-2bae-4d5e-a9d9-3b5f704efa39
+		summarizeBy: none
+		sourceColumn: ClosingMonthYearNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SeasonNorthNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Season
+		lineageTag: 5c7f9bf3-e7e4-4391-882f-42ac3377fcaf
+		summarizeBy: none
+		sourceColumn: SeasonNorthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SeasonNorthName
+		dataType: string
+		displayFolder: Season
+		lineageTag: ca119e95-9c10-4731-9582-f7311a0b6822
+		summarizeBy: none
+		sourceColumn: SeasonNorthName
+		sortByColumn: SeasonNorthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SeasonSouthNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: Season
+		lineageTag: 95f551c0-0b78-4e1d-b7b4-58f888ed36b7
+		summarizeBy: none
+		sourceColumn: SeasonSouthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SeasonSouthName
+		dataType: string
+		displayFolder: Season
+		lineageTag: 70a252a7-7b73-4b2b-85f6-6402dcb3a6e1
+		summarizeBy: none
+		sourceColumn: SeasonSouthName
+		sortByColumn: SeasonSouthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Holiday
+		dataType: string
+		displayFolder: BusinessDays_Holidays
+		lineageTag: 1c948984-844d-4079-b1b3-5276fea69d96
+		summarizeBy: none
+		sourceColumn: Holiday
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessDayNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: BusinessDays_Holidays
+		lineageTag: 029bd807-86d7-4ec9-9472-2238cf567cd5
+		summarizeBy: none
+		sourceColumn: BusinessDayNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessDayName
+		dataType: string
+		displayFolder: BusinessDays_Holidays
+		lineageTag: ebc1e756-d6f4-47ad-b6ac-4b1c2c6cfb45
+		summarizeBy: none
+		sourceColumn: BusinessDayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearStartNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalYear
+		lineageTag: 463903fd-cd50-4bd6-8e5a-4ff774369958
+		summarizeBy: none
+		sourceColumn: FiscalYearStartNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearEndNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalYear
+		lineageTag: 8d49ea2c-f792-4d48-87cd-f9d5579b8ada
+		summarizeBy: none
+		sourceColumn: FiscalYearEndNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: string
+		displayFolder: FiscalYear
+		lineageTag: b3e45e4c-a3b1-4aba-b66b-c1d0f8951eb9
+		summarizeBy: none
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearStart
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: FiscalYear
+		lineageTag: 4d7015e5-58eb-4525-b330-314033ff57cf
+		summarizeBy: none
+		sourceColumn: FiscalYearStart
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FiscalYearEnd
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: FiscalYear
+		lineageTag: 99d20d1d-7e77-49cf-b478-dfdcab901a3c
+		summarizeBy: none
+		sourceColumn: FiscalYearEnd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CurrentFiscalYear
+		dataType: string
+		displayFolder: FiscalYear
+		lineageTag: 080a8561-303b-4eb9-a040-8d0fccc27ea0
+		summarizeBy: none
+		sourceColumn: CurrentFiscalYear
+		sortByColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearsToToday
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalYear
+		lineageTag: 8eb5ed24-9a85-407f-9a6c-5ecd4154e3c3
+		summarizeBy: none
+		sourceColumn: FiscalYearsToToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalMonthNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalMonth
+		lineageTag: e3f7e538-136e-463b-8c70-2e8ee598caa3
+		summarizeBy: none
+		sourceColumn: FiscalMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalMonthName
+		dataType: string
+		displayFolder: FiscalMonth
+		lineageTag: a388edf8-a9a2-4f75-81f6-464de1ed6d8e
+		summarizeBy: none
+		sourceColumn: FiscalMonthName
+		sortByColumn: FiscalMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalMonthNameShort
+		dataType: string
+		displayFolder: FiscalMonth
+		lineageTag: 8c0f6c21-57c6-4e76-a444-53973708fd82
+		summarizeBy: none
+		sourceColumn: FiscalMonthNameShort
+		sortByColumn: FiscalMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentFiscalMonth
+		dataType: string
+		displayFolder: FiscalMonth
+		lineageTag: e2a32dd1-a159-4b81-a991-a7427ea84151
+		summarizeBy: none
+		sourceColumn: CurrentFiscalMonth
+		sortByColumn: FiscalMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearMonthName
+		dataType: string
+		displayFolder: FiscalMonth
+		lineageTag: efe3b00f-6cb4-4244-a70c-d014fcb53f2b
+		summarizeBy: none
+		sourceColumn: FiscalYearMonthName
+		sortByColumn: FiscalYearMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearMonthNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalMonth
+		lineageTag: 14398ef9-c92f-4d6f-9254-b618db5476f2
+		summarizeBy: none
+		sourceColumn: FiscalYearMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearMonthCurrent
+		dataType: string
+		displayFolder: FiscalMonth
+		lineageTag: 168fce29-2bb6-41f2-8775-87440de2ad66
+		summarizeBy: none
+		sourceColumn: FiscalYearMonthCurrent
+		sortByColumn: FiscalYearMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalMonthsToToday
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalMonth
+		lineageTag: fbd46077-118b-4057-aadc-8520916c17b7
+		summarizeBy: none
+		sourceColumn: FiscalMonthsToToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarterNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalQuarter
+		lineageTag: d9d488c6-265d-41d7-adb4-de31b237cd6c
+		summarizeBy: none
+		sourceColumn: FiscalQuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarterName
+		dataType: string
+		displayFolder: FiscalQuarter
+		lineageTag: 2576934e-e6cc-4a07-ae7d-7fbd97358576
+		summarizeBy: none
+		sourceColumn: FiscalQuarterName
+		sortByColumn: FiscalQuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalMonthOfQuarterNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalQuarter
+		lineageTag: 846b194f-26b9-471d-8f54-6ac9a1a6da28
+		summarizeBy: none
+		sourceColumn: FiscalMonthOfQuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearQuarterName
+		dataType: string
+		displayFolder: FiscalQuarter
+		lineageTag: ca736d71-7d01-44ed-9c67-2dc70f299de1
+		summarizeBy: none
+		sourceColumn: FiscalYearQuarterName
+		sortByColumn: FiscalYearQuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearQuarterNumber
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalQuarter
+		lineageTag: f0fec483-f4e3-4341-8cdd-f6edd2c6700f
+		summarizeBy: none
+		sourceColumn: FiscalYearQuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarterStart
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: FiscalQuarter
+		lineageTag: eb0c4030-d4da-4006-9158-e0ee3ab3896b
+		summarizeBy: none
+		sourceColumn: FiscalQuarterStart
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FiscalQuarterEnd
+		dataType: dateTime
+		formatString: Short Date
+		displayFolder: FiscalQuarter
+		lineageTag: 1cab0254-0e9e-4230-b40c-9c642a6f0b8c
+		summarizeBy: none
+		sourceColumn: FiscalQuarterEnd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FiscalQuartersToToday
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalQuarter
+		lineageTag: 07b43721-0033-4490-b1ac-fd6003349011
+		summarizeBy: none
+		sourceColumn: FiscalQuartersToToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentFiscalQuarter
+		dataType: string
+		displayFolder: FiscalQuarter
+		lineageTag: ba646b3a-47cf-47d9-9589-b92ece6620c4
+		summarizeBy: none
+		sourceColumn: CurrentFiscalQuarter
+		sortByColumn: FiscalYearQuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfFiscalQuarter
+		dataType: int64
+		formatString: 0
+		displayFolder: FiscalQuarter
+		lineageTag: 6c124c60-4c42-4d68-a3af-500e8b743f5c
+		summarizeBy: none
+		sourceColumn: DayOfFiscalQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		displayFolder: Date
+		lineageTag: e4f2f1dd-34fc-438a-8bef-ef8de883db19
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = User
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    Workspace = Workspaces{[workspaceId=WorkspaceId]}[Data],
+				    Dataflow = Workspace{[dataflowName="Calendar"]}[Data],
+				    DimDate_ = Dataflow{[entity="DimDate",version=""]}[Data],
+				    AddedCustom = Table.AddColumn(DimDate_, "DateKey", each [Year] * 10000 + [MonthNumber] * 100 + [DayOfMonth], Int64.Type)
+				in
+				    AddedCustom
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

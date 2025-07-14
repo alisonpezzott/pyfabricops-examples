@@ -1,0 +1,23 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.144.1378.0 (25.06)+cba1e61f16ea36d44901f06fa446299040122394
+
+annotation PBI_QueryOrder = ["DimDate","DimCustomer","DimProduct","FactInternetSales","Server","Database","WorkspaceId"]
+
+annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode","TMDL-Extension"]
+
+ref table DimDate
+ref table DimCustomer
+ref table DimProduct
+ref table FactInternetSales
+
+ref cultureInfo en-US
+

@@ -1,0 +1,19 @@
+expression Server = "#{Server}#" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=false]
+	lineageTag: fbf210cc-61ab-47ab-bee6-b95993d2b482
+
+	annotation PBI_ResultType = Text
+
+expression Database = "#{Database}#" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=false]
+	lineageTag: 30ca4587-6ee7-4c47-bb17-22f07992ac68
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression WorkspaceId = "#{WorkspaceId}#" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=false]
+	lineageTag: 540e979e-d8f5-4bc9-bb51-a7489218d14e
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigation
+
