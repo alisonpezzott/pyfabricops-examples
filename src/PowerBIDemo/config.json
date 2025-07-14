@@ -62,7 +62,7 @@
                             "IsParameterQueryRequired": false
                         },
                         "Database": {
-                            "Value": "AdventureWorksDW2022-DEV",
+                            "Value": "AdventureWorksDW2022-PRD",
                             "IsParameterQuery": true,
                             "Type": "Text",
                             "IsParameterQueryRequired": false
