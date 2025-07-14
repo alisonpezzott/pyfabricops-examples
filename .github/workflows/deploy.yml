@@ -54,7 +54,7 @@ jobs:
         DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
         DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: python scripts/008_deploy_powerbi_cicd.py
+      run: python scripts/008_01_deploy_powerbi_cicd_no_df1.py
 
     - name: Commit changes
       run: |
