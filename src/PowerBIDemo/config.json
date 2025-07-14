@@ -1,0 +1,87 @@
+{
+    "dev": {
+        "PowerBIDemo": {
+            "workspace_config": {
+                "workspace_id": "4f9d3eed-a98c-4c44-adfb-da3b5189df0a",
+                "workspace_name": "PowerBIDemo-DEV",
+                "workspace_description": "First Power BI Project with PyFabricOps",
+                "capacity_id": "",
+                "capacity_region": null,
+                "workspace_roles": [
+                    {
+                        "user_uuid": "cbe83b10-3b7c-4479-8168-e5281fabf7ea",
+                        "user_type": "Group",
+                        "role": "Admin",
+                        "display_name": "AppFabricUsers",
+                        "group_type": "SecurityGroup",
+                        "email": null
+                    },
+                    {
+                        "user_uuid": "9322eb4a-4132-4bd1-8df1-5cd3d1d2400b",
+                        "user_type": "User",
+                        "role": "Admin",
+                        "display_name": "Alison Pezzott",
+                        "user_principal_name": "alison.pezzott@overdax.com"
+                    },
+                    {
+                        "user_uuid": "b025341a-965a-4c35-b12e-2af63e5eb58f",
+                        "user_type": "User",
+                        "role": "Contributor",
+                        "display_name": "Dev",
+                        "user_principal_name": "dev@overdax.com"
+                    },
+                    {
+                        "user_uuid": "bde43861-55e1-4144-b572-be115312967f",
+                        "user_type": "ServicePrincipal",
+                        "role": "Admin",
+                        "display_name": "AppFabric",
+                        "app_id": "7f3c52e1-46fa-4d5d-880b-c1e721a1f729"
+                    }
+                ]
+            },
+            "folders": {
+                "Customers": "2921bfaf-e32a-4af6-9b6e-5dbf2c7b4da4",
+                "Main": "82cb5ec3-ed4a-46a4-8940-41f6d6714102"
+            },
+            "dataflows_gen1": {
+                "Calendar": {
+                    "id": "c5ff781a-c4cd-4d8d-8591-282e9034046c",
+                    "description": "Global calendar of project."
+                }
+            },
+            "semantic_models": {
+                "Sales": {
+                    "parameters": {
+                        "Server": {
+                            "Value": "PEZZOTT",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "Database": {
+                            "Value": "AdventureWorksDW2022-DEV",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "CalendarWorkspaceId": {
+                            "Value": "4f9d3eed-a98c-4c44-adfb-da3b5189df0a",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        },
+                        "CalendarDataflowId": {
+                            "Value": "c5ff781a-c4cd-4d8d-8591-282e9034046c",
+                            "IsParameterQuery": true,
+                            "Type": "Text",
+                            "IsParameterQueryRequired": false
+                        }
+                    },
+                    "id": "5d6b6862-e0c1-4943-81b3-09c7df4f4c31",
+                    "description": "",
+                    "folder_id": "82cb5ec3-ed4a-46a4-8940-41f6d6714102"
+                }
+            }
+        }
+    }
+}

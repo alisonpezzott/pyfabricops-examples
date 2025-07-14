@@ -1,0 +1,128 @@
+table FactInternetSales
+	lineageTag: d249f991-b847-4e8c-8ca4-0c5ee7015ab5
+
+	measure 'Sales Amount' =
+			
+			SUMX(
+			    'FactInternetSales',
+			    'FactInternetSales'[OrderQuantity] * 'FactInternetSales'[UnitPrice]
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 9142f5fe-a48e-48ab-a0fb-54bfd960b8b6
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 971d6607-009f-47b5-a171-d89d94b3755e
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ee87bb49-76b3-4e46-a1f3-039b66c89284
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		annotation SummarizationSetBy = User
+
+	column DueDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fc24e8e-b2a1-44b4-b058-40d70ce157ac
+		summarizeBy: none
+		sourceColumn: DueDateKey
+
+		annotation SummarizationSetBy = User
+
+	column ShipDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d776f87-fefd-4906-bb85-bfd0a5a43e13
+		summarizeBy: none
+		sourceColumn: ShipDateKey
+
+		annotation SummarizationSetBy = User
+
+	column CustomerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 46721e16-05c9-4469-82ad-d7961d42692f
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderNumber
+		dataType: string
+		lineageTag: 6c3294ed-91a4-417f-8bde-a6654294a9cb
+		summarizeBy: none
+		sourceColumn: SalesOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 89511451-bd26-4304-93a3-5cef5ff6e6ca
+		summarizeBy: none
+		sourceColumn: OrderQuantity
+
+		annotation SummarizationSetBy = User
+
+	column UnitPrice
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: b2c7df80-aa09-4349-91e9-57a5d8872aec
+		summarizeBy: none
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column UnitPriceDiscountPct
+		dataType: double
+		lineageTag: 695f898e-190c-4b11-983a-1451eb69d20e
+		summarizeBy: none
+		sourceColumn: UnitPriceDiscountPct
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductStandardCost
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: d55bb6fb-fa6c-4699-a86d-4a519ae28669
+		summarizeBy: none
+		sourceColumn: ProductStandardCost
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	partition FactInternetSales = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Server, Database),
+				    dbo_FactInternetSales = Source{[Schema="dbo",Item="FactInternetSales"]}[Data],
+				    RemovedOtherColumns = Table.SelectColumns(dbo_FactInternetSales,{"ProductKey", "OrderDateKey", "DueDateKey", "ShipDateKey", "CustomerKey", "SalesOrderNumber", "OrderQuantity", "UnitPrice", "UnitPriceDiscountPct", "ProductStandardCost"})
+				in
+				    RemovedOtherColumns
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
