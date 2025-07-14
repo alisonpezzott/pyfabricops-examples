@@ -1182,8 +1182,8 @@ table DimDate
 				let
 				    Source = PowerPlatform.Dataflows(null),
 				    Workspaces = Source{[Id="Workspaces"]}[Data],
-				    Workspace = Workspaces{[workspaceId=CalendarWorkspaceId]}[Data],
-				    Dataflow = Workspace{[dataflowId=CalendarDataflowId]}[Data],
+				    Workspace = Workspaces{[workspaceId=WorkspaceId]}[Data],
+				    Dataflow = Workspace{[dataflowName="Calendar"]}[Data],
 				    DimDate_ = Dataflow{[entity="DimDate",version=""]}[Data],
 				    AddedCustom = Table.AddColumn(DimDate_, "DateKey", each [Year] * 10000 + [MonthNumber] * 100 + [DayOfMonth], Int64.Type)
 				in
