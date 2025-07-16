@@ -386,3 +386,21 @@ def pbi_sync_from_workspace(
         project_path,
         branch=branch,
     )
+
+
+def pbi_enable_local_edit(
+        project_path: str,
+        workspace_alias: str,
+        *,
+        branch: str = None,
+        config_path: str = None, 
+):
+    """
+    Enable local editing for Power BI semantic models.
+    """
+    pf.replace_semantic_models_placeholders_with_parameters(
+        project_path=project_path,
+        workspace_alias=workspace_alias,
+        branch=branch,
+        config_path=config_path,
+    )
