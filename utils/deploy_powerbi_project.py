@@ -8,10 +8,11 @@ from typing import Literal
 
 def deploy_powerbi_project(
     project: str,
-    mode: Literal['create', 'update'],
+    mode: Literal['init_from_local', 'update_from_local', 'update_from_git'],
     *,
     workspace_alias: str = None,
     project_path: str = None,
+    dataflows_gen1: list[str] = None,
 ):
     """
     Deploys a Power BI project using PyFabricOps.
@@ -51,12 +52,7 @@ def deploy_powerbi_project(
     print('===============================================')
 
 
-    # Enable logging and set authentication provider
-    pf.setup_logging(format_style='minimal')
-    pf.set_auth_provider('env') 
-
-
-    # Extract workspace roles configuration
+    # Retrieve workspace roles configuration
     workspace_roles_path = os.path.join(root_path, 'workspaces_roles.json')
     print(f"Workspace roles configuration path: {workspace_roles_path}")
     with open(workspace_roles_path, 'r', encoding='utf-8') as f:
@@ -88,7 +84,7 @@ def deploy_powerbi_project(
     print(f'Workspace ID: {workspace_id}')
 
 
-    # Deploy the folders first.
+    # Deploy the folders first
     pf.deploy_folders(
         workspace=workspace_id, 
         project_path=project_path,
@@ -106,10 +102,12 @@ def deploy_powerbi_project(
         running_in_github_actions = False
         # Deploy the calendar dataflow gen1
         # Due a conflict with others dataflow generations and limitations with folders we need deploy it separately.
-        pf.deploy_dataflow_gen1(
-            workspace=workspace_id, 
-            path=f'{project_path}/{project}/Calendar.Dataflow',
-        )
+        if dataflows_gen1:
+            for dataflow in dataflows_gen1:
+                pf.deploy_dataflow_gen1(
+                    workspace=workspace_id, 
+                    path=f'{project_path}/{project}/{dataflow}',
+                )
 
 
     # Export dataflow config
@@ -124,7 +122,7 @@ def deploy_powerbi_project(
 
 
     # Extract the parameters from semantic models
-    if mode == 'create':
+    if mode == 'init_from_local':
         pf.extract_semantic_models_parameters(
             project_path,
             workspace_alias=project,
@@ -133,7 +131,7 @@ def deploy_powerbi_project(
 
 
     # Replace the placeholders with actual values
-    elif mode == 'update':
+    elif mode in ['update_from_local', 'update_from_git']:
         pf.replace_semantic_models_placeholders_with_parameters(
             project_path,
             workspace_alias=project,
@@ -157,13 +155,6 @@ def deploy_powerbi_project(
     )
 
 
-    pf.replace_semantic_models_parameters_with_placeholders(
-        project_path,
-        workspace_alias,
-        branch=branch,
-    )
-
-
     pf.deploy_all_reports_cicd(
         project_path=project_path,
         workspace_alias=project,
@@ -171,12 +162,10 @@ def deploy_powerbi_project(
         workspace_suffix=workspace_suffix,
     )
 
-
-if __name__ == "__main__":
-    deploy_powerbi_project(
-        project="PowerBIDemo",
-        workspace_alias="PowerBIDemo",
-        mode='update',
-        project_path='src/PowerBIDemo',
+    # Replace parameters with placeholders to commit 
+    # For local editing use the function pf.replace_semantic_models_placeholders_with_parameters
+    pf.replace_semantic_models_parameters_with_placeholders(
+        project_path,
+        workspace_alias,
+        branch=branch,
     )
-
