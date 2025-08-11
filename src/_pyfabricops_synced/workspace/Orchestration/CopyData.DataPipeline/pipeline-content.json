@@ -18,7 +18,6 @@
                   "datasetSettings": {
                     "type": "SqlServerTable",
                     "typeProperties": {
-                      "schema": "dbo",
                       "table": {
                         "value": "@item().source.table",
                         "type": "Expression"
@@ -27,7 +26,7 @@
                     },
                     "schema": [],
                     "externalReferences": {
-                      "connection": "b9b548a6-296a-431f-b7c7-7db3a39acaf4"
+                      "connection": "25c39679-c050-4b46-a7e3-6d2915a9542a"
                     },
                     "annotations": []
                   }
@@ -56,7 +55,7 @@
                     },
                     "schema": [],
                     "linkedService": {
-                      "name": "Lakehouse001",
+                      "name": "LakeUnique",
                       "properties": {
                         "type": "Lakehouse",
                         "typeProperties": {
