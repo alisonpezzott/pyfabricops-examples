@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "UpdateCalendar",
+    "description": "Update the calendar table in the Lakehouse."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2f177e16-9c5e-9772-4962-5e05ad6111d0"
+  }
+}
